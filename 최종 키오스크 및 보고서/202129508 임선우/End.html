@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키오스크</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="End.css">
+    <link rel="stylesheet" href="modal.css">
+    <style>
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'GmarketSansMedium', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+            <div id="menuClass">
+                <div class="scroll-container">
+                    <h1 onclick="reloadPage()">
+                        <img src="cross.jpeg" alt="Cross Image" style="margin-right: 10px; height: 100px; width: 100px;">
+                        <strong>DIT약국</strong>
+                    </h1>
+                
+                <hr>
+                <!-- 메뉴 바 -->
+                <div id="menuBar">
+                    <a href="#" id="tab1" onclick="showMenu('menu1'); setActiveTab('tab1')">알약류</a>
+                    <a href="#" id="tab2" onclick="showMenu('menu2'); setActiveTab('tab2')">연고류</a>
+                    <a href="#" id="tab3" onclick="showMenu('menu3'); setActiveTab('tab3')">물약류</a>
+                    <a href="#" id="tab4" onclick="showMenu('menu4'); setActiveTab('tab4')">비타민류</a>
+                    <a href="#" id="tab5" onclick="showMenu('menu5'); setActiveTab('tab5')">기타류</a>
+                </div>
+
+                
+                <!-- 메뉴 내용 -->
+                <div id="menu1" class="menuSection">
+                    <div class="pillContainer">
+                        <div class="item">
+                            <img src="pill1.jpg" alt="알약1">
+                            <div class="itemDetails">
+                                <b>타이레놀</b><br>
+                                <small>(10정)</small>
+                                <hr>
+                                <p>5,000원</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="pill2.jpg" alt="알약2">
+                            <div class="itemDetails">
+                                <b>이지펜6 프로</b><br>
+                                <small>(10정)</small>
+                                <hr>
+                                <p>3,000원</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="pill3.jpeg" alt="알약3">
+                            <div class="itemDetails">
+                                <b>쿨드림</b><br>
+                                <small>(10정)</small>
+                                <hr>
+                                <p>3,000원</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="pill4.jpeg" alt="알약4">
+                            <div class="itemDetails">
+                                <b>타미노펜</b><br>
+                                <small>(8정)</small>
+                                <hr>
+                                <p>3,000원</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="pill5.jpeg" alt="알약5">
+                            <div class="itemDetails">
+                                <b>파모티딘</b><br>
+                                <small>(20정)</small>
+                                <hr>
+                                <p>5,000원</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="pill6.jpeg" alt="알약6">
+                            <div class="itemDetails">
+                                <b>페인엔젤 셀</b><br>
+                                <small>(10정)</small>
+                                <hr>
+                                <p>3,000원</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div id="menu2" class="menuSection" style="display: none;">
+                        <div class="pillContainer">
+                            <div class="item">
+                                <img src="salve1.jpeg" alt="연고1">
+                                <div class="itemDetails">
+                                    <b>노스카나</b><br>
+                                    <small>(여드름 흉터)</small>
+                                    <hr>
+                                    <p>11,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="salve2.jpeg" alt="연고2">
+                                <div class="itemDetails">
+                                    <b>후시딘</b><br>
+                                    <small>(염증, 고름)</small>
+                                    <hr>
+                                    <p>5,500원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="salve3.jpeg" alt="연고3">
+                                <div class="itemDetails">
+                                    <b>마데카솔</b><br>
+                                    <small>(찰과상)</small>
+                                    <hr>
+                                    <p>6,500원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="salve4.jpeg" alt="연고4">
+                                <div class="itemDetails">
+                                    <b>오라메디</b><br>
+                                    <small>(구내염)</small>
+                                    <hr>
+                                    <p>8,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="salve5.jpeg" alt="연고5">
+                                <div class="itemDetails">
+                                    <b>비판텐</b><br>
+                                    <small>(급 만성 피부염)</small>
+                                    <hr>
+                                    <p>10,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="salve6.jpeg" alt="연고6">
+                                <div class="itemDetails">
+                                    <b>애크논 크림</b><br>
+                                    <small>(여드름, 좁쌀)</small>
+                                    <hr>
+                                    <p>12,000원</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                    <div id="menu3" class="menuSection" style="display: none;">
+                        <div class="pillContainer">
+                            <div class="item">
+                                <img src="wat1.jpeg" alt="물약1">
+                                <div class="itemDetails">
+                                    <b>콜대원</b><br>
+                                    <small>(20ml, 5포)</small>
+                                    <hr>
+                                    <p>4,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="wat2.jpeg" alt="물약2">
+                                <div class="itemDetails">
+                                    <b>부루펜</b><br>
+                                    <small>(80ml, 1병)</small>
+                                    <hr>
+                                    <p>6,500원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="wat3.jpeg" alt="물약3">
+                                <div class="itemDetails">
+                                    <b>판콜 S</b><br>
+                                    <small>(30ml, 5병)</small>
+                                    <hr>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="wat4.jpeg" alt="물약4">
+                                <div class="itemDetails">
+                                    <b>파인큐</b><br>
+                                    <small>(20ml, 5포)</small>
+                                    <hr>
+                                    <p>4,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="wat5.jpeg" alt="물약5">
+                                <div class="itemDetails">
+                                    <b>챔프 시럽</b><br>
+                                    <small>(5ml, 10포)</small>
+                                    <hr>
+                                    <p>5,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="wat6.jpeg" alt="물약6">
+                                <div class="itemDetails">
+                                    <b>코푸 시럽</b><br>
+                                    <small>(20ml, 6포)</small>
+                                    <hr>
+                                    <p>4,000원</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                   
+                    <div id="menu4" class="menuSection" style="display: none;">
+                        <div class="pillContainer">
+                            <div class="item">
+                                <img src="vita1.jpeg" alt="비타민1">
+                                <div class="itemDetails">
+                                    <b>솔라씨</b><br>
+                                    <small>(2g x 80정)</small>
+                                    <hr>
+                                    <p>5,500원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="vita2.jpeg" alt="비타민2">
+                                <div class="itemDetails">
+                                    <b>텐텐</b><br>
+                                    <small>(10개)</small>
+                                    <hr>
+                                    <p>2,500원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="vita3.jpeg" alt="비타민3">
+                                <div class="itemDetails">
+                                    <b>고려은단 비타민C 1000</b><br>
+                                    <small>(120정)</small>
+                                    <hr>
+                                    <p>18,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="vita4.jpeg" alt="비타민4">
+                                <div class="itemDetails">
+                                    <b>레모나</b><br>
+                                    <small>(2g x 70포)</small>
+                                    <hr>
+                                    <p>15,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="vita5.jpeg" alt="비타민5">
+                                <div class="itemDetails">
+                                    <b>비타하임</b><br>
+                                    <small>오렌지맛 (1개)</small>
+                                    <hr>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="vita6.jpeg" alt="비타민6">
+                                <div class="itemDetails">
+                                    <b>센트롬</b><br>
+                                    <small>(50정)</small>
+                                    <hr>
+                                    <p>25,000원</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                
+
+                    <div id="menu5" class="menuSection" style="display: none;">
+                        <div class="pillContainer">
+                            <div class="item">
+                                <img src="gita1.png" alt="기타1">
+                                <div class="itemDetails">
+                                    <b>대일밴드</b><br>
+                                    <small>(8매)</small>
+                                    <hr>
+                                    <p>1,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="gita2.png" alt="기타2">
+                                <div class="itemDetails">
+                                    <b>방수밴드</b><br>
+                                    <small>(30매)</small>
+                                    <hr>
+                                    <p>6,500원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="gita3.png" alt="기타3">
+                                <div class="itemDetails">
+                                    <b>메디폼 A</b><br>
+                                    <small>(1매)</small>
+                                    <hr>
+                                    <p>6,400원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="gita4.png" alt="기타4">
+                                <div class="itemDetails">
+                                    <b>아렉스 파스</b><br>
+                                    <small>(대형 8매), 근육통 관절통 타박상</small>
+                                    <hr>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="gita5.png" alt="기타5">
+                                <div class="itemDetails">
+                                    <b>페노크린 파스</b><br>
+                                    <small>(10매), 소염진통효과</small>
+                                    <hr>
+                                    <p>3,000원</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="gita6.png" alt="기타6">
+                                <div class="itemDetails">
+                                    <b>이지덤</b><br>
+                                    <small>(99매), 습윤 여드름 패치</small>
+                                    <hr>
+                                    <p>9,900원</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                
+                <strong><hr></strong>
+                <div>
+                    <div class="row" id="orderContainer">
+                        <div class="col-lg-6">
+                            <h2>주문 내역</h2>
+                            <ul id="cart" class="list-group">
+                            </ul>
+                        </div>
+                    <div class="col-lg-6" id="paymentSection">
+                        <h3>결제 금액: <span id="totalPrice" class="h2"></span></h3>
+                        <button id="checkoutBtn" class="btn btn-primary" onclick="checkout()">결제</button>
+                        
+                        
+                        
+                      </div>
+                    </div>
+                    </div>
+            <hr>
+            <p>Copyright © 2023-2023 LIMSEONU. All Rights Reserved.</p>
+            <hr>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 영수증 출력 -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>결제가 완료되었습니다</h2>
+        <img src="check.png" alt="Check Image" class="img">
+        <b>=== DIT 약국 영수증 ===</b>
+        <small id="receiptDateTime"></small>
+        <small>=================================</small>
+        <b>--제품명--/--가격--/--수량--/--총금액--</b>
+        <div id="receiptContent">
+            <p id="paymentAmountLine"></p>
+        </div>
+        <small>=================================</small>
+        <b>=== DIT 약국 영수증 === </b>
+        <button onclick="closeModal()">확인</button>
+        <button onclick="print()">인쇄</button>
+    </div>
+</div>
+
+    
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="End.js"></script>
+</body>
+
+</html>
