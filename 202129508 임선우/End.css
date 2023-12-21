@@ -1,0 +1,172 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+#menuClass {
+  text-align: center;
+  margin-top: 0px;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1000; 
+}
+
+h1 {
+  color: #333; 
+  margin-top: 65px;
+  margin-bottom: 50px;
+  font-size: 100px;
+  flex-direction: row;
+}
+
+/* 메뉴 옵션 */
+#menuBar {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#menuBar a {
+  text-decoration: none;
+  margin: 0 15px;
+  color: #555; 
+}
+
+#menuBar a.active {
+  color: red; 
+}
+
+#menuBar a:hover {
+  color: skyblue;
+}
+
+.menuSection {
+  display: none;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.menuSection img {
+  max-width: 150px;
+  margin: 10px auto; 
+  display: block; 
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.menuSection img:hover {
+  transform: scale(1.2);
+}
+
+.itemInfo {
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+
+.itemInfo p {
+  margin: 10px 0;
+}
+
+#menuContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 약 목록 */
+.pillContainer {
+  text-align: center;
+  margin-bottom: 20px;
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+
+.pillContainer .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pillContainer img {
+  width: 100%; 
+  max-width: 150px; 
+  height: 120px; 
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  margin: 5px;
+}
+
+.pillContainer .item:hover {
+  color: skyblue;
+}
+
+.itemDetails {
+  text-align: center;
+  padding: 10px;
+}
+
+.itemDetails p {
+  margin: 5px 0;
+}
+
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  border: 1px solid #ccc; 
+  padding: 10px;
+}
+
+.cart-container {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-left: 0;
+}
+
+#cart {
+  list-style: none;
+  padding: 0;
+  flex: 1; 
+  margin-right: 20px;
+}
+
+.cart-item {
+  position: fixed;
+  z-index: 9999;
+  transition: all 0.5s ease-in-out;
+  max-width: 100px;
+  max-height: 100px
+}
+
+#orderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+
+
+#checkoutBtn {
+  padding: 20px 40px;
+  font-size: 24px;
+  background-color: skyblue;
+  border: skyblue;
+}
+
+
+/* 인쇄할 때 버튼 숨기기 */
+@media print {
+  #paymentModal .modal-content button {
+    display: none;
+  }
+}
